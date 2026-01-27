@@ -61,7 +61,7 @@ Kameranız bozulduğunda şu sırayı takip edin:
 4.  **Yeniden Başlatma:** Bilgisayarı mutlaka yeniden başlatın.
 5.  **Sihirli Manuel Tetikleme:** Eğer hala görüntü yoksa:
     *   `Ayarlar > Bluetooth ve Cihazlar > Kameralar > USB Webcam` yoluna gidin.
-    *   **Devre Dışı Bırak** deyin, 2 saniye bekleyin ve **Etkinleştir** deyin.
+    *   **Devre Dışı Bırak** deyin, 2 saniye bekleyin ve **Etkinleştir** deyin. (Muhtemelen etkinleştirmek için yeniden başlatmanız istenebilir AMA YENİDEN BAŞLATMAYIN! Ve kameranızı test edin.)
 
 ---
 
