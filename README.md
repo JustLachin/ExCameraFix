@@ -49,7 +49,7 @@ Klasörünüzdeki her dosya, bu karmaşık yapının bir parçasını düzeltmek
 
 Kameranız bozulduğunda şu sırayı takip edin:
 
-1.  **Güç Kontrolü:** `Fn + F10` tuşuna basarak kameranın donanımsal olarak açık olduğundan emin olun (Işık yanmalı).
+1.  **Güç Kontrolü (BAZI BİLGİSAYARLARDA):** `Fn + F10` tuşuna basarak kameranın donanımsal olarak açık olduğundan emin olun (Işık yanmalı).
 2.  **Yönetici Onarımı:** PowerShell'i yönetici olarak açın ve şu komutu çalıştırın:
     ```powershell
     Set-ExecutionPolicy Bypass -Scope Process -Force; .\SuperReset.ps1
