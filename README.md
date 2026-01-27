@@ -78,16 +78,48 @@ Set-ItemProperty -Path $cameraPath -Name "EnhancedPowerManagementEnabled" -Value
 
 ---
 
-## ⌨️ 3. KULLANILAN TERMİNAL KOMUTLARI (Özet)
+## ⌨️ 3. KULLANILAN TERMİNAL KOMUTLARI VE ÇALIŞTIRMA
 
-Bu süreçte kullanılan ve her kullanıcının bilmesi gereken komutlar:
+Scriptleri çalıştırmak için Windows'un kısıtlamalarını aşmanız gerekir. Aşağıdaki komutlar, sistem ayarlarını bozmadan sadece o işlem özelinde izinleri açar.
 
-| Komut | Amacı |
+### 🛡️ A. PowerShell Script Çalıştırma Komutları (Bypass)
+PowerShell scriptleri varsayılan olarak engellidir. Bunları çalıştırmak için şu komut dizilimlerini kullanın:
+
+| Hedef Script | Çalıştırma Komutu (PowerShell - Yönetici) |
 | :--- | :--- |
-| `Get-PnpDevice -Class Camera` | Kameranın donanımsal durumunu kontrol eder. |
-| `Get-Service FrameServer` | Kamera servisinin çalışıp çalışmadığını gösterir. |
-| `python camera_test.py` | Kameradan görüntü alınıp alınamadığını test eder. |
-| `pip install opencv-python` | Görüntü yakalama kütüphanesini kurar. |
+| **SuperReset** | `Set-ExecutionPolicy Bypass -Scope Process -Force; .\SuperReset.ps1` |
+| **FullReset** | `Set-ExecutionPolicy Bypass -Scope Process -Force; .\FullReset.ps1` |
+| **BlackScreenFix** | `Set-ExecutionPolicy Bypass -Scope Process -Force; .\BlackScreenFix.ps1` |
+
+### 🔍 B. Teşhis ve Kontrol Komutları
+Sorunun nerede olduğunu anlamak için terminale yapıştırabileceğiniz derin analiz komutları:
+
+*   **Donanım Durumu (PnP):**
+    ```powershell
+    Get-PnpDevice -Class Camera,Image | Select-Object FriendlyName, InstanceId, Status, ProblemCode
+    ```
+*   **Servis Durumu:**
+    ```powershell
+    Get-Service -Name FrameServer, CapabilityAccessManagerService | Select-Object Name, Status, StartType
+    ```
+*   **Kayıt Defteri (FrameServer) Kontrolü:**
+    ```powershell
+    Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Media Foundation\Platform" -Name "EnableFrameServerMode"
+    ```
+
+### 🐍 C. Python ve Test Komutları
+Python ile kameraya doğrudan erişmek için gereken kurulumlar:
+
+```bash
+# 1. Gerekli kütüphaneyi kur
+pip install opencv-python
+
+# 2. Kamera testini başlat
+python camera_test.py
+
+# 3. Düşük seviye (DirectShow) testi
+python ForceAccess.py
+```
 
 ---
 
@@ -102,9 +134,30 @@ Eğer kameran çalışmıyorsa şu sırayı asla bozma:
     *   Ayarlar > Bluetooth ve Cihazlar > Kameralar > USB Webcam yoluna git.
     *   **Devre Dışı Bırak** de, 2 saniye bekle ve tekrar **Etkinleştir.** (Muhtemelen etkinleştirmek için yeniden başlatmanız istenebilir AMA YENİDEN BAŞLATMAYIN! Ve kameranızı test edin.)
 
+### ⚡ E. RunFix.bat - Tek Tıkla Başlatıcı
+Scriptleri sağ tıklayıp "Yönetici olarak çalıştır" demeye gerek kalmadan başlatan toplu iş dosyası.
+
+**Dosya İçeriği:**
+```batch
+@echo off
+:: Yönetici yetkisi kontrolü
+net session >nul 2>&1
+if %errorLevel% == 0 (
+    echo Yonetici yetkisi onaylandi.
+) else (
+    echo LUTFEN BU DOSYAYI SAG TIKLAYIP 'YONETICI OLARAK CALISTIR'IN!
+    pause
+    exit
+)
+
+powershell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%~dp0SuperReset.ps1""' -Verb RunAs}"
+echo Islem tamamlandi.
+pause
+```
+
 ---
 
-## � 5. TÜM DOSYALARIN LİSTESİ VE GÖREVLERİ
+## 📦 5. TÜM DOSYALARIN LİSTESİ VE GÖREVLERİ
 
 1.  **`FullReset.ps1`**: En ağır donanım resetleme scripti.
 2.  **`SuperReset.ps1`**: Frame Server engelini kaldıran ana script.
