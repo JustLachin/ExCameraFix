@@ -100,7 +100,7 @@ Eğer kameran çalışmıyorsa şu sırayı asla bozma:
 3.  **Kritik Kapatma:** Bilgisayarı **Yeniden Başlatma.** Bilgisayarı tamamen **KAPAT (Shut Down)**. 10 saniye bekle ve sonra tekrar aç. (Bu, sensörün voltajını sıfırlayan tek yoldur).
 4.  **Manuel Tetikleme (Gerekirse):** Bilgisayar açıldığında hala görüntü yoksa:
     *   Ayarlar > Bluetooth ve Cihazlar > Kameralar > USB Webcam yoluna git.
-    *   **Devre Dışı Bırak** de, 2 saniye bekle ve tekrar **Etkinleştir.**
+    *   **Devre Dışı Bırak** de, 2 saniye bekle ve tekrar **Etkinleştir.** (Muhtemelen etkinleştirmek için yeniden başlatmanız istenebilir AMA YENİDEN BAŞLATMAYIN! Ve kameranızı test edin.)
 
 ---
 
