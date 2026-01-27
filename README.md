@@ -1,5 +1,5 @@
 # 📸 EXCALIBUR G870 ULTRA KAPSAMLI KAMERA ONARIM VE KULLANIM REHBERİ
-
+DOSYALARI MAVİ LİNKTEN İNDİR: https://github.com/JustLachin/ExCameraFix/archive/refs/heads/main.zip
 Bu döküman, Excalibur G870 serisi laptoplarda yaşanan kronik kamera sorunlarını (Linux'ta çalışıp Windows'ta çalışmama, siyah ekran, donma, "kamera bulunamadı" hataları) kökten çözmek ve bir daha yaşanmamasını sağlamak amacıyla hazırlanmış profesyonel bir teknik rehberdir.
 
 ---
