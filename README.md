@@ -1,6 +1,6 @@
 # 📸 EXCALIBUR G870: NİHAİ KAMERA ONARIM VE TEKNİK DÖKÜMANTASYON REHBERİ (V5)
 
-> **DOSYALARI İNDİR:** [https://github.com/JustLachin/ExCameraFix/releases/download/v5/ExCameraFix-v5-PR-ready.zip](https://github.com/JustLachin/ExCameraFix/releases/download/v5/ExCameraFix-v5-PR-ready.zip)
+> **DOSYALARI İNDİR:👉** [https://github.com/JustLachin/ExCameraFix/releases/download/v5/ExCameraFix-v5-PR-ready.zip](https://github.com/JustLachin/ExCameraFix/releases/download/v5/ExCameraFix-v5-PR-ready.zip)
 "SADECE RunFix.bat DOSYASINI ÇALIŞTIRIN, 1 NUMARA SEÇEREK ENTER BASIN, SİSTEM AYARLARINDAN KAMERA SEÇENEKLERİNE GELİP KAMERAYI DEVRE DIŞI BIRAKIN VE ARTIK KAMERANIZ ÇALIŞIR DURUMDA OLACAK!" Bu döküman, Excalibur G870 serisi cihazlarda yaşanan ve Windows 10/11 işletim sistemlerinde kronikleşen kamera sorunlarını çözmek için geliştirilen tüm yöntemleri, kodları ve teknik mantığı içeren **en kapsamlı rehberdir.**
 
 ---
