@@ -1,11 +1,10 @@
-# 📸 EXCALIBUR G870: NİHAİ KAMERA ONARIM VE TEKNİK DÖKÜMANTASYON REHBERİ (V4.0)
+# 📸 EXCALIBUR G870: NİHAİ KAMERA ONARIM VE TEKNİK DÖKÜMANTASYON REHBERİ (V5)
 
-> **DOSYALARI İNDİR:** [https://github.com/JustLachin/ExCameraFix/archive/refs/heads/main.zip](https://github.com/JustLachin/ExCameraFix/archive/refs/heads/main.zip)
-
-Bu döküman, Excalibur G870 serisi cihazlarda yaşanan ve Windows 10/11 işletim sistemlerinde kronikleşen kamera sorunlarını çözmek için geliştirilen tüm yöntemleri, kodları ve teknik mantığı içeren **en kapsamlı rehberdir.**
+> **DOSYALARI İNDİR:** [https://github.com/JustLachin/ExCameraFix/releases/download/v5/ExCameraFix-v5-PR-ready.zip](https://github.com/JustLachin/ExCameraFix/releases/download/v5/ExCameraFix-v5-PR-ready.zip)
+"SADECE RunFix.bat DOSYASINI ÇALIŞTIRIN, 1 NUMARA SEÇEREK ENTER BASIN, SİSTEM AYARLARINDAN KAMERA SEÇENEKLERİNE GELİP KAMERAYI DEVRE DIŞI BIRAKIN VE ARTIK KAMERANIZ ÇALIŞIR DURUMDA OLACAK!" Bu döküman, Excalibur G870 serisi cihazlarda yaşanan ve Windows 10/11 işletim sistemlerinde kronikleşen kamera sorunlarını çözmek için geliştirilen tüm yöntemleri, kodları ve teknik mantığı içeren **en kapsamlı rehberdir.**
 
 ---
-
+THANKS TO [@Cavanshirpro](https://github.com/Cavanshirpro)
 ## � 1. TEKNİK SORUN ANALİZİ (Neden Çalışmıyor?)
 
 Excalibur G870 kamerası Linux'ta tak-çalıştır (plug-and-play) olarak çalışırken Windows'ta şu sebeplerle kilitlenir:
